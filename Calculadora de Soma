@@ -1,0 +1,33 @@
+loop = True
+erro_resposta = False
+
+numero = 0
+soma = 0
+
+print("------- C A L C U L A D O R A   D E   S O M A -------")
+
+numero = int(input("Digite o primeiro numero: "))
+soma = soma + numero
+
+while loop:
+    
+    numero = int(input("Digite o proximo numero: "))
+    soma = soma + numero
+    
+    print(f"A soma atual é {soma}")
+    
+    erro_resposta = True
+    
+    while erro_resposta:
+        continua = input("Deseja continuar? [s/n]: ")
+        if continua == 's':
+            erro_resposta = False
+            continue
+        elif continua == 'n':
+            print("-------Fechando--------")
+            loop = False
+            erro_resposta = False
+            
+        else:
+            print("Digite 's' para sim ou 'n' para não!")
+            erro_resposta = True
